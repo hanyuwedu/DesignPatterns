@@ -33,7 +33,7 @@ public class ContentCreator implements OfficialAccount {
     public void notifyFollowers() {
         if (!this.threads.isEmpty()) {
             for (User user : followers) {
-                user.update(this);
+                user.update(this.threads.peek());
             }
         }
     }

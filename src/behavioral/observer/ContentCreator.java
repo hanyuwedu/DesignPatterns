@@ -30,7 +30,7 @@ public class ContentCreator implements OfficialAccount {
     }
 
     @Override
-    public void notifyFollowers() {
+    public void pushToFollowers() {
         if (!this.threads.isEmpty()) {
             for (User user : followers) {
                 user.update(this.threads.peek());

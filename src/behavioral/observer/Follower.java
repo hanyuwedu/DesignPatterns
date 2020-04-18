@@ -28,7 +28,8 @@ public class Follower implements User{
         officialAccount.removeFollower(this                    );
     }
 
-    public void update(Message message) {
+    @Override
+    public void receiveUpdate(Message message) {
         if (message.type.equals(Type.Advertisement) &&
         !this.receiveAds) {
             return;

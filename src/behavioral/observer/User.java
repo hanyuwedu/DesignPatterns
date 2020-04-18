@@ -3,5 +3,5 @@ package behavioral.observer;
 public interface User {
     void follow(OfficialAccount officialAccount);
     void unfollow(OfficialAccount officialAccount);
-    void update(Message message);
+    void receiveUpdate(Message message);
 }

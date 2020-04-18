@@ -30,28 +30,16 @@ public class ContentCreator implements OfficialAccount {
     }
 
     @Override
-    public void notifyFollowers() {
+    public void pushToFollowers() {
         if (!this.threads.isEmpty()) {
             for (User user : followers) {
-                user.update(this.threads.peek());
+                user.receiveUpdate(this.threads.peek());
             }
-        }
-    }
-
-    public Message getMostRecentMessage() {
-        try {
-            if (!this.threads.isEmpty()) {
-                return this.threads.peek();
-            } else {
-                throw new InvalidQueryException("There is no thread now!");
-            }
-        } catch (InvalidQueryException e) {
-            return null;
         }
     }
 
     public void releaseNewMessage(Message message) {
         this.threads.push(message);
-        this.notifyFollowers();
+        this.pushToFollowers();
     }
 }

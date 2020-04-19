@@ -24,15 +24,16 @@ public class Follower implements User{
         officialAccount.removeFollower(this);
     }
 
-    @Override
-    public void receiveUpdate(Message message) {
-        if (message.type.equals(Type.Advertisement) &&
-        !this.receiveAds) {
+    public void update(OfficialAccount officialAccount) {
+        ContentCreator contentCreator = (ContentCreator) officialAccount;   //这里把接口具像化来处理具体的逻辑
+        if (contentCreator.getMostRecentMessage().type.equals(Type.Advertisement) &&
+                !this.receiveAds) {
             return;
         } else {
-            this.threads.add(message);
+            this.threads.add(contentCreator.getMostRecentMessage());
         }
     }
+
 
     public void printThreads() {
         for (Message message : threads) {

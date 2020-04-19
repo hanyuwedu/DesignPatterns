@@ -1,7 +1,5 @@
 package behavioral.observer;
 
-import structural.strategy.InvalidQueryException;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
@@ -30,16 +28,24 @@ public class ContentCreator implements OfficialAccount {
     }
 
     @Override
-    public void pushToFollowers() {
+    public void notifyFollowers() {
         if (!this.threads.isEmpty()) {
             for (User user : followers) {
-                user.receiveUpdate(this.threads.peek());
+                user.update(this);
             }
         }
     }
 
     public void releaseNewMessage(Message message) {
         this.threads.push(message);
-        this.pushToFollowers();
+        this.notifyFollowers();
+    }
+
+    public Message getMostRecentMessage() {
+        if (!this.threads.isEmpty()) {
+            return this.threads.peek();
+        } else {
+            return null;
+        }
     }
 }

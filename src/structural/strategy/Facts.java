@@ -1,5 +1,7 @@
 package structural.strategy;
 
+import exceptions.InvalidQueryException;
+
 import java.util.HashMap;
 import java.util.Map;
 

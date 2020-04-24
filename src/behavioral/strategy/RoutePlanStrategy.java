@@ -1,4 +1,4 @@
-package structural.strategy;
+package behavioral.strategy;
 
 import java.util.List;
 

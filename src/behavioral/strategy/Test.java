@@ -1,4 +1,4 @@
-package structural.strategy;
+package behavioral.strategy;
 
 public class Test {
     public static void main(String[] args) {

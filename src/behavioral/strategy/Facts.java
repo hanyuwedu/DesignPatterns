@@ -1,4 +1,4 @@
-package structural.strategy;
+package behavioral.strategy;
 
 import exceptions.InvalidQueryException;
 

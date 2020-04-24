@@ -1,12 +1,12 @@
 package behavioral.templatemethod;
 
-public class WorkCalendar extends Calendar {
-    public WorkCalendar(int day, int month) {
+public class WorkSchedule extends CalendarSchedule {
+    public WorkSchedule(int day, int month) {
         super(day, month);
     }
 
     @Override
-    public void morning() {
+    protected void morning() {
         if (!dateCheck()) {
             System.out.println("Gym work.");
         }
@@ -15,7 +15,7 @@ public class WorkCalendar extends Calendar {
     }
 
     @Override
-    public void afternoon() {
+    protected void afternoon() {
         System.out.println("Lunch.");
         System.out.println("Work.");
         System.out.println("Dairy");
@@ -23,17 +23,17 @@ public class WorkCalendar extends Calendar {
     }
 
     @Override
-    public void evening() {
+    protected void evening() {
         System.out.println("Study.");
     }
 
     @Override
-    public void midnight() {
+    protected void midnight() {
         return;
     }
 
     @Override
-    public boolean dateCheck() {
+    protected boolean dateCheck() {
         return this.month == 10 || this.month == 11 || this.month == 12;
     }
 }

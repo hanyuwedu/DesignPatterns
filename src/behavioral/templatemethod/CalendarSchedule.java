@@ -1,10 +1,10 @@
 package behavioral.templatemethod;
 
-public abstract class Calendar {
+public abstract class CalendarSchedule {
     protected int day;
     protected int month;
 
-    protected Calendar(int day, int month) {
+    protected CalendarSchedule(int day, int month) {
         this.day = day;
         this.month = month;
     }

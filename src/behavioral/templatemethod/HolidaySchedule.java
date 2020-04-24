@@ -1,7 +1,7 @@
 package behavioral.templatemethod;
 
-public class HolidayCalendar extends Calendar {
-    protected HolidayCalendar(int day, int month) {
+public class HolidaySchedule extends CalendarSchedule {
+    protected HolidaySchedule(int day, int month) {
         super(day, month);
     }
 

@@ -11,7 +11,7 @@ public class Test {
 
         Title personel = new Ministry("Ministry of Personel", "appointments, merit ratings, promotions, and demotions of officials, as well as granting of honorific titles.");
         Title revenue = new Ministry("Ministry of Revenue", "gathering census data, collecting taxes and handling state revenues, while there were two offices of currency that were subordinate to it.");
-        // 尽量调用Title而非具体的subclass
+        // 尽量使用Title而非具体的subclass
 
         stateAffair.addReport(personel);
         stateAffair.addReport(revenue);

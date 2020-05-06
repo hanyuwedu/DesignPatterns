@@ -6,12 +6,12 @@ public class Expresso extends Base {
     }
 
     @Override
-    String getBase() {
+    protected String getBase() {
         return "Expresso";
     }
 
     @Override
-    double getPrice() {
+    public double getPrice() {
         return 4.15;
     }
 }

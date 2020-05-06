@@ -1,7 +1,7 @@
 package structural.decorator;
 
 public abstract class Ingredient extends Coffee {
-    Coffee coffee;
+    protected Coffee coffee;
 
     public Ingredient(Coffee coffee) {
         this.coffee = coffee;
@@ -9,7 +9,7 @@ public abstract class Ingredient extends Coffee {
     }
 
     @Override
-    String getBase() {
+    protected String getBase() {
         return this.coffee.getBase();
     }
 }

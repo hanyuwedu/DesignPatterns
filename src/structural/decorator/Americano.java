@@ -4,12 +4,12 @@ public class Americano extends Base {
     public Americano() { }
 
     @Override
-    String getBase() {
+    protected String getBase() {
         return "Americano";
     }
 
     @Override
-    double getPrice() {
+    public double getPrice() {
         return 2.15;
     }
 }

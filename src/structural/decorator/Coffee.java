@@ -5,9 +5,9 @@ import java.util.List;
 public abstract class Coffee {
     protected List<String> ingredients;
 
-    abstract String getBase();
+    public abstract double getPrice();
 
-    abstract double getPrice();
+    protected abstract String getBase();
 
     public List<String> getIngredients() {
         return this.ingredients;

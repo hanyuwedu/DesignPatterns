@@ -7,7 +7,7 @@ public class WithMilk extends Ingredient {
     }
 
     @Override
-    double getPrice() {
+    public double getPrice() {
         return super.coffee.getPrice() + 0.25;
     }
 }

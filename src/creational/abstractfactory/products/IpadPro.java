@@ -1,8 +1,8 @@
 package creational.abstractfactory.products;
 
-public class SnapDragon855 extends Chip {
+public class IpadPro extends Pad {
     @Override
     public String getName() {
-        return "Qualcomm SnapDragon 855";
+        return "Apple iPad Pro";
     }
 }

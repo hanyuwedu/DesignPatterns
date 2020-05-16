@@ -1,8 +1,8 @@
 package creational.abstractfactory.products;
 
-public class Kirin980 extends Chip {
+public class Iphone11 extends SmartPhone {
     @Override
     public String getName() {
-        return "Huawei Kirin 980";
+        return "Apple iPhone 11";
     }
 }

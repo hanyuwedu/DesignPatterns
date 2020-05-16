@@ -1,8 +1,8 @@
 package creational.abstractfactory.products;
 
-public class OLED extends Screen {
+public class GalaxyS10 extends SmartPhone {
     @Override
     public String getName() {
-        return "OLED";
+        return "Samsung Galaxy S10";
     }
 }

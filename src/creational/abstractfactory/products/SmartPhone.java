@@ -1,5 +1,5 @@
 package creational.abstractfactory.products;
 
-public abstract class Screen {
+public abstract class SmartPhone {
     public abstract String getName();
 }

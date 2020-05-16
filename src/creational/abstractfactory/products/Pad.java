@@ -1,5 +1,5 @@
 package creational.abstractfactory.products;
 
-public abstract class Chip {
+public abstract class Pad {
     public abstract String getName();
 }

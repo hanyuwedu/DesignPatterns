@@ -1,8 +1,8 @@
 package creational.abstractfactory.products;
 
-public class LED extends Screen {
+public class GalaxyTabS6 extends Pad {
     @Override
     public String getName() {
-        return "Amo LED";
+        return "Samsung Galaxy Tab S6";
     }
 }

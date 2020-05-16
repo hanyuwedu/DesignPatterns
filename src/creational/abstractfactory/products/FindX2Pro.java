@@ -1,8 +1,8 @@
 package creational.abstractfactory.products;
 
-public class LiquidRetina extends Screen {
+public class FindX2Pro extends SmartPhone {
     @Override
     public String getName() {
-        return "Liquid Retina";
+        return "Oppo Find X2 Pro";
     }
 }
